@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/module/signup/view/signup_view.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: ColorLib.primaryColor,
       ),
-      home: const SignupView(),
+      home: Container(),
     );
   }
 }
