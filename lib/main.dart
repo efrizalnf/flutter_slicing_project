@@ -1,3 +1,5 @@
+import 'package:flutter_slicing_project/state_util.dart';
+navigatorKey: Get.navigatorKey,
 import 'package:flutter/material.dart';
 
 import 'module/home/view/home_view.dart';
