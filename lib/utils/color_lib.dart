@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ColorLib {
-  static MaterialColor primaryColor = hexToMaterialColor('#59B58D');
-  static MaterialColor secondaryColor = hexToMaterialColor('#66EFB3');
-  static MaterialColor darkColor = hexToMaterialColor('#009D58');
+  static MaterialColor primaryColor = hexToMaterialColor('59B58D');
+  static MaterialColor secondaryColor = hexToMaterialColor('66EFB3');
+  static MaterialColor darkColor = hexToMaterialColor('009D58');
 
   static MaterialColor hexToMaterialColor(String hexColor) {
-    final String opaqueHexColor = hexColor;
-    'ff';
+    final String opaqueHexColor = '${hexColor}ff';
 
     final int colorInt = int.parse(opaqueHexColor, radix: 16);
 
@@ -33,5 +32,17 @@ class ColorLib {
     };
 
     return swatch;
+  }
+}
+
+extension ColorExtension on String {
+  toColor() {
+    var hexColor = replaceAll("#", "");
+    if (hexColor.length == 6) {
+      hexColor = "FF$hexColor";
+    }
+    if (hexColor.length == 8) {
+      return Color(int.parse("0x$hexColor"));
+    }
   }
 }

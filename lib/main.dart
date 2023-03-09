@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/utils/color_lib.dart';
+
+import 'module/signup/view/signup_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: ColorLib.primaryColor,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
+            .copyWith(background: Colors.white),
       ),
-      home: Container(),
+      home: const SignupView(),
     );
   }
 }
