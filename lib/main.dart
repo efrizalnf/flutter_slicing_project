@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'module/home/view/home_view.dart';
+import 'package:flutter_slicing_project/module/signup/view/signup_view.dart';
+import 'package:flutter_slicing_project/utils/color_lib.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: ColorLib.primaryColor,
       ),
-      home: const HomeView(),
+      home: const SignupView(),
     );
   }
 }
