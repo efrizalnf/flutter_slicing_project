@@ -1,3 +1,5 @@
+import 'package:flutter_slicing_project/state_util.dart';
+
 import 'package:flutter/material.dart';
 
 import 'module/signup/view/signup_view.dart';
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
             .copyWith(background: Colors.white),
       ),
       home: const SignupView(),
+      navigatorKey: Get.navigatorKey,
     );
   }
 }
