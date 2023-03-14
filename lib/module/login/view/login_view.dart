@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
+import 'package:flutter_slicing_project/module/login/widget/buttons/elogin_button.dart';
+import 'package:flutter_slicing_project/module/login/widget/buttons/esignup_button.dart';
+import 'package:flutter_slicing_project/module/login/widget/buttons/etext_button.dart';
+import 'package:flutter_slicing_project/module/login/widget/textfield/etext_field.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginView extends StatefulWidget {
@@ -10,7 +14,7 @@ class LoginView extends StatefulWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: ListView(children: [
+        child: Column(children: [
           Padding(
             padding: EdgeInsets.only(
                 top: Get.height * 0.05,
@@ -71,48 +75,32 @@ class LoginView extends StatefulWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  color: Colors.amber,
-                  width: Get.width * 0.84,
-                  height: Get.height * 0.05,
-                ),
+                const ETextField(label: 'Email'),
                 SizedBox(
                   height: Get.height * 0.01,
                 ),
-                Container(
-                  color: Colors.amber,
-                  width: Get.width * 0.84,
-                  height: Get.height * 0.05,
-                ),
-                SizedBox(
-                  height: Get.height * 0.02,
-                ),
-                Container(
-                  color: Colors.amber,
-                  width: Get.width * 0.84,
-                  height: Get.height * 0.05,
-                ),
-                SizedBox(
-                  height: Get.height * 0.02,
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Forgot password?",
-                    style: GoogleFonts.roboto(
-                      color: const Color(0xFF59B58D),
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16.0,
-                    ),
+                ETextField(
+                  label: 'Password',
+                  suffixIcon: Icon(
+                    Icons.visibility,
+                    color: Colors.grey[600],
                   ),
                 ),
                 SizedBox(
-                  height: Get.height * 0.25,
+                  height: Get.height * 0.02,
                 ),
-                Container(
-                  color: Colors.amber,
-                  width: Get.width * 0.84,
-                  height: Get.height * 0.06,
+                const EloginButton(
+                  label: 'Login',
+                ),
+                SizedBox(
+                  height: Get.height * 0.02,
+                ),
+                const ETextButton(),
+                SizedBox(
+                  height: Get.height * 0.20,
+                ),
+                const EsignupButton(
+                  label: 'Sign Up',
                 ),
               ],
             ),
