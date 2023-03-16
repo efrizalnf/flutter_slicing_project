@@ -1,4 +1,4 @@
-import 'package:flutter_slicing_project/module/login/view/login_view2.dart';
+import 'package:flutter_slicing_project/module/login/view/login_view3.dart';
 import 'package:flutter_slicing_project/state_util.dart';
 
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
             .copyWith(background: Colors.white),
       ),
-      home: const LoginView2(),
+      home: const LoginView3(),
       navigatorKey: Get.navigatorKey,
     );
   }

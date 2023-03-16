@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/state_util.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ionicons/ionicons.dart';
 
-class EloginWithFacebookButton extends StatelessWidget {
-  const EloginWithFacebookButton({
+class SignupButton extends StatelessWidget {
+  const SignupButton({
     super.key,
   });
 
@@ -14,22 +13,24 @@ class EloginWithFacebookButton extends StatelessWidget {
       padding: EdgeInsets.only(left: Get.width * 0.08, right: Get.width * 0.08),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFF59B58D),
+            elevation: 0.0,
+            backgroundColor: const Color(0xFFF4F6F6),
             minimumSize: const Size.fromHeight(44)),
         onPressed: () {},
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Log In with Facebook',
+              'Sign Up',
               style: GoogleFonts.roboto(
+                color: const Color(0xFF455154),
                 fontWeight: FontWeight.w700,
                 fontSize: 18.0,
               ),
             ),
             const Icon(
-              Ionicons.logo_facebook,
-              color: Color(0xFFFFFFFF),
+              Icons.email,
+              color: Color(0xFF969FA2),
             )
           ],
         ),
