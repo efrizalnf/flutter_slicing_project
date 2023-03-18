@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+class ColorLib {
+  static final primaryColor = '#59B58D'.toColor();
+}
+
 extension ColorExtension on String {
   toColor() {
     var hexColor = replaceAll("#", "");

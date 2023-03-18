@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:ionicons/ionicons.dart';
-import '../controller/signup_controller.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
@@ -14,59 +13,57 @@ class SignupView extends StatefulWidget {
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0.0,
+        centerTitle: true,
         backgroundColor: Colors.transparent,
-        leadingWidth: 0,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // leadingWidth: 0,
+        leading: Row(
           children: [
-            Flexible(
-              child: Row(
-                children: [
-                  IconButton(
-                    padding: const EdgeInsets.all(0.0),
-                    onPressed: () {},
-                    icon: const Icon(
-                      Ionicons.chevron_back,
-                      size: 20.0,
-                      color: Colors.green,
-                    ),
-                  ),
-                  Text(
-                    "Login",
-                    style: TextStyle(
-                      fontSize: 14.0,
-                      color: '#59B58D'.toColor(),
-                    ),
-                  ),
-                ],
+            Expanded(
+              child: IconButton(
+                padding: const EdgeInsets.all(0.0),
+                onPressed: () {},
+                icon: Icon(
+                  Ionicons.chevron_back,
+                  size: 20.0,
+                  color: ColorLib.primaryColor,
+                ),
               ),
             ),
-            Flexible(
-              child: Image.asset(
-                "assets/images/logo.png",
-                width: 35.0,
-                height: 35.0,
+            Text(
+              "Login",
+              style: TextStyle(
+                fontSize: 15.0,
+                color: ColorLib.primaryColor,
               ),
             ),
-            const Spacer(),
           ],
+        ),
+        title: Image.asset(
+          "assets/images/logo2.png",
+          width: 35.0,
+          height: 35.0,
         ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 23.0),
-        child: Container(
+        child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             children: [
-              SizedBox(
-                height: 48.0,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[200],
-                  ),
-                  onPressed: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  backgroundColor: Colors.grey[200],
+                  minimumSize: const Size.fromHeight(55),
+                ),
+                onPressed: () {},
+                child: LayoutBuilder(
+                    builder: (BuildContext context, BoxConstraints constrains) {
+                  return Padding(
+                    padding: EdgeInsets.only(
+                      left: constrains.maxWidth * 0.01,
+                      right: constrains.maxWidth * 0.01,
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -84,8 +81,8 @@ class SignupView extends StatefulWidget {
                         ),
                       ],
                     ),
-                  ),
-                ),
+                  );
+                }),
               ),
               Container(
                 margin: const EdgeInsets.all(21.0),
@@ -203,37 +200,47 @@ class SignupView extends StatefulWidget {
                     height: 30.0,
                   ),
                   Center(
-                    child: RichText(
-                      maxLines: 2,
-                      softWrap: true,
-                      text: TextSpan(
-                        children: [
-                          const TextSpan(
-                            text: "By Signing up, you agree to our",
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
+                    child: Column(
+                      children: [
+                        RichText(
+                          maxLines: 2,
+                          softWrap: true,
+                          text: const TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "By Signing up, you agree to our",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
                           ),
-                          TextSpan(
-                            text: " Terms",
-                            style: TextStyle(
-                              color: '#59B58D'.toColor(),
-                            ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: " Terms",
+                                style: TextStyle(
+                                  color: '#59B58D'.toColor(),
+                                ),
+                              ),
+                              const TextSpan(
+                                text: " And",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              TextSpan(
+                                text: " Condition",
+                                style: TextStyle(
+                                  color: '#59B58D'.toColor(),
+                                ),
+                              ),
+                            ],
                           ),
-                          const TextSpan(
-                            text: " And",
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                          TextSpan(
-                            text: " Condition",
-                            style: TextStyle(
-                              color: '#59B58D'.toColor(),
-                            ),
-                          ),
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ),
                 ],
