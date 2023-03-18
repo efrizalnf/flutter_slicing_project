@@ -46,7 +46,7 @@ class SignupView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.only(top: 23.0),
-        child: Container(
+        child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             children: [
@@ -55,8 +55,6 @@ class SignupView extends StatefulWidget {
                   elevation: 0.0,
                   backgroundColor: Colors.grey[200],
                   minimumSize: const Size.fromHeight(55),
-                  // padding: EdgeInsets.only(
-                  //     left: Get.height * 0.03, right: Get.height * 0.03),
                 ),
                 onPressed: () {},
                 child: LayoutBuilder(
@@ -202,37 +200,47 @@ class SignupView extends StatefulWidget {
                     height: 30.0,
                   ),
                   Center(
-                    child: RichText(
-                      maxLines: 2,
-                      softWrap: true,
-                      text: TextSpan(
-                        children: [
-                          const TextSpan(
-                            text: "By Signing up, you agree to our",
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
+                    child: Column(
+                      children: [
+                        RichText(
+                          maxLines: 2,
+                          softWrap: true,
+                          text: const TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "By Signing up, you agree to our",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
                           ),
-                          TextSpan(
-                            text: " Terms",
-                            style: TextStyle(
-                              color: '#59B58D'.toColor(),
-                            ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: " Terms",
+                                style: TextStyle(
+                                  color: '#59B58D'.toColor(),
+                                ),
+                              ),
+                              const TextSpan(
+                                text: " And",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
+                              TextSpan(
+                                text: " Condition",
+                                style: TextStyle(
+                                  color: '#59B58D'.toColor(),
+                                ),
+                              ),
+                            ],
                           ),
-                          const TextSpan(
-                            text: " And",
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                          TextSpan(
-                            text: " Condition",
-                            style: TextStyle(
-                              color: '#59B58D'.toColor(),
-                            ),
-                          ),
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ),
                 ],
