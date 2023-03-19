@@ -45,21 +45,26 @@ class SignupView extends StatefulWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(top: Get.height * 0.03),
+        padding: const EdgeInsets.only(top: 23.0),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: Get.width * 0.08),
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
-                  minimumSize: Size.fromHeight(Get.height * 0.06),
                   backgroundColor: Colors.grey[200],
+                  minimumSize: const Size.fromHeight(55),
                 ),
                 onPressed: () {},
                 child: LayoutBuilder(
-                  builder: (context, constraints) {
-                    return Row(
+                    builder: (BuildContext context, BoxConstraints constrains) {
+                  return Padding(
+                    padding: EdgeInsets.only(
+                      left: constrains.maxWidth * 0.01,
+                      right: constrains.maxWidth * 0.01,
+                    ),
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -76,9 +81,9 @@ class SignupView extends StatefulWidget {
                           color: Colors.grey[400],
                         ),
                       ],
-                    );
-                  },
-                ),
+                    ),
+                  );
+                }),
               ),
               Container(
                 margin: const EdgeInsets.all(21.0),
