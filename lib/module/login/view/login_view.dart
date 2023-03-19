@@ -11,42 +11,51 @@ class LoginView extends StatefulWidget {
 
   Widget build(context, LoginController controller) {
     controller.view = this;
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
       body: SafeArea(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const EGridWidget(),
-          SizedBox(
-            height: Get.height * 0.09,
-          ),
-          const ETextField(label: 'Email'),
-          SizedBox(
-            height: Get.height * 0.01,
-          ),
-          ETextField(
-            label: 'Password',
-            suffixIcon: Icon(
-              Icons.visibility,
-              color: Colors.grey[600],
+        child: SingleChildScrollView(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const EGridWidget(),
+            SizedBox(
+              height: Get.height * 0.09,
             ),
-          ),
-          SizedBox(
-            height: Get.height * 0.02,
-          ),
-          const EloginButton(
-            label: 'Login',
-          ),
-          SizedBox(
-            height: Get.height * 0.02,
-          ),
-          const ETextButton(),
-          SizedBox(
-            height: Get.height * 0.20,
-          ),
-          const EsignupButton(
-            label: 'Sign Up',
-          ),
-        ]),
+            ETextField(
+              label: 'Email',
+              textEditingController: emailController,
+            ),
+            SizedBox(
+              height: Get.height * 0.01,
+            ),
+            ETextField(
+              label: 'Password',
+              suffixIcon: Icon(
+                Icons.visibility,
+                color: Colors.grey[600],
+              ),
+              textEditingController: passwordController,
+            ),
+            SizedBox(
+              height: Get.height * 0.02,
+            ),
+            const EloginButton(
+              label: 'Login',
+            ),
+            SizedBox(
+              height: Get.height * 0.02,
+            ),
+            const ETextButton(),
+            SizedBox(
+              height: Get.height * 0.20,
+            ),
+            const EsignupButton(
+              label: 'Sign Up',
+            ),
+          ]),
+        ),
       ),
     );
   }

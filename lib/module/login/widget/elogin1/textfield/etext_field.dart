@@ -5,14 +5,18 @@ import 'package:google_fonts/google_fonts.dart';
 class ETextField extends StatelessWidget {
   final String label;
   final Icon? suffixIcon;
-  const ETextField({super.key, required this.label, this.suffixIcon});
+  final TextEditingController textEditingController;
+  const ETextField(
+      {super.key,
+      required this.label,
+      this.suffixIcon,
+      required this.textEditingController});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        left: Get.width * 0.08,
-        right: Get.width * 0.08,
+      padding: EdgeInsets.symmetric(
+        horizontal: Get.width * 0.08,
       ),
       child: Container(
         height: 44.0,
@@ -27,19 +31,15 @@ class ETextField extends StatelessWidget {
             ),
           ),
         ),
-        child: Center(
-          child: TextField(
-            style: TextStyle(
-              color: Colors.grey[800],
-            ),
-            decoration: InputDecoration(
-              hintText: label,
-              suffixIcon: suffixIcon,
-              border: InputBorder.none,
-              hintStyle: GoogleFonts.roboto(
-                fontWeight: FontWeight.w400,
-                color: const Color(0xFF455154),
-              ),
+        child: TextField(
+          controller: textEditingController,
+          decoration: InputDecoration(
+            hintText: label,
+            suffixIcon: suffixIcon,
+            border: InputBorder.none,
+            hintStyle: GoogleFonts.roboto(
+              fontWeight: FontWeight.w400,
+              color: const Color(0xFF455154),
             ),
           ),
         ),
