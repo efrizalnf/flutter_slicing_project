@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:ionicons/ionicons.dart';
-import '../controller/signup_controller.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
@@ -53,22 +52,23 @@ class SignupView extends StatefulWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(top: 23.0),
-        child: Container(
-          padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.only(top: Get.height * 0.03),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: Get.width * 0.08),
           child: Column(
             children: [
-              SizedBox(
-                height: 48.0,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[200],
-                  ),
-                  onPressed: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Row(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  elevation: 0.0,
+                  minimumSize: Size.fromHeight(Get.height * 0.06),
+                  backgroundColor: Colors.grey[200],
+                ),
+                onPressed: () {},
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    return Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
                           "Log In with facebook",
@@ -83,8 +83,8 @@ class SignupView extends StatefulWidget {
                           color: Colors.grey[400],
                         ),
                       ],
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
               Container(
