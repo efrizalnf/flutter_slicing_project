@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
-import 'package:flutter_slicing_project/module/login/controller/login_controller2.dart';
 import 'package:flutter_slicing_project/module/login/widget/elogin2/grid/egrid_widget2.dart';
 import 'package:flutter_slicing_project/module/login/widget/elogin2/suggest_text/suggest_text.dart';
 import '../widget/elogin2/buttons/elogin_with_facebook_button.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/state_util.dart';
+import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ETextField extends StatelessWidget {
@@ -23,9 +24,9 @@ class ETextField extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           horizontal: 16.0,
         ),
-        decoration: const BoxDecoration(
-          color: Color(0xFFCDCDCD),
-          borderRadius: BorderRadius.all(
+        decoration: BoxDecoration(
+          color: '#CDCDCD'.toColor(),
+          borderRadius: const BorderRadius.all(
             Radius.circular(
               6.0,
             ),
@@ -39,7 +40,7 @@ class ETextField extends StatelessWidget {
             border: InputBorder.none,
             hintStyle: GoogleFonts.roboto(
               fontWeight: FontWeight.w400,
-              color: const Color(0xFF455154),
+              color: '#455154'.toColor(),
             ),
           ),
         ),

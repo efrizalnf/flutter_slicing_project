@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/state_util.dart';
+import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ETextButton extends StatelessWidget {
@@ -16,7 +17,7 @@ class ETextButton extends StatelessWidget {
         child: Text(
           "Forgot password?",
           style: GoogleFonts.roboto(
-            color: const Color(0xFF59B58D),
+            color: '#59B58D'.toColor(),
             fontWeight: FontWeight.w700,
             fontSize: 16.0,
           ),
