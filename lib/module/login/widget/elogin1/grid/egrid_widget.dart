@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/state_util.dart';
+import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class EGridWidget extends StatelessWidget {
@@ -25,7 +26,7 @@ class EGridWidget extends StatelessWidget {
                 Text(
                   "Welcome\nto MagicBook",
                   style: GoogleFonts.roboto(
-                    color: const Color(0xFF455154),
+                    color: '#455154'.toColor(),
                     fontWeight: FontWeight.w700,
                     fontSize: 36.0,
                   ),
@@ -36,7 +37,7 @@ class EGridWidget extends StatelessWidget {
                 Text(
                   "Biggest collection of 300+ layouts\nfor iOS prototyping.",
                   style: GoogleFonts.roboto(
-                    color: const Color(0xFF455154),
+                    color: '#455154'.toColor(),
                     fontWeight: FontWeight.w400,
                     fontSize: 16.0,
                   ),
@@ -50,8 +51,8 @@ class EGridWidget extends StatelessWidget {
           Expanded(
             child: Image.asset(
               "assets/images/logo2.png",
-              width: 69.0,
-              height: 69.0,
+              width: Get.width * 0.18,
+              height: Get.height * 0.08,
               fit: BoxFit.fill,
             ),
           )

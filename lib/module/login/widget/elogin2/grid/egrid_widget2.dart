@@ -13,7 +13,7 @@ class EGridWidget2 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
-            "assets/images/logo.png",
+            "assets/images/logo2.png",
             width: 69.0,
             height: 69.0,
             fit: BoxFit.fill,

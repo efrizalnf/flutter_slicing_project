@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin1/buttons/elogin_button.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin1/buttons/esignup_button.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin1/buttons/etext_button.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin1/grid/egrid_widget.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin1/textfield/etext_field.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);

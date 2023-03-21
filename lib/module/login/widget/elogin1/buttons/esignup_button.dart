@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/state_util.dart';
+import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class EsignupButton extends StatelessWidget {
@@ -12,7 +13,7 @@ class EsignupButton extends StatelessWidget {
       padding: EdgeInsets.only(left: Get.width * 0.08, right: Get.width * 0.08),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFCDCDCD),
+            backgroundColor: '#CDCDCD'.toColor(),
             minimumSize: const Size.fromHeight(44)),
         onPressed: () {},
         child: Row(
