@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/state_util.dart';
 import '../view/signup_view.dart';
+import 'package:flutter_slicing_project/state_util.dart';
 
 class SignupController extends State<SignupView> implements MvcController {
   static late SignupController instance;
