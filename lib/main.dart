@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
             .copyWith(background: Colors.white),
       ),
-      home: const LoginView5(),
+      home: PlaceHolder();
       navigatorKey: Get.navigatorKey,
     );
   }
