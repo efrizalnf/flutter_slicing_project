@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/shared/widget/other/e_circle_avatar.dart';
-import 'package:flutter_slicing_project/module/signup/widget/signup2/e_term_conditions.dart';
+import 'package:flutter_slicing_project/module/signup/widget/e_term_conditions.dart';
 import 'package:ionicons/ionicons.dart';
 
 import '../../../shared/widget/buttons/e_button.dart';

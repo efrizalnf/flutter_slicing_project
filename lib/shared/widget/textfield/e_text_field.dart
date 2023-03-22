@@ -26,7 +26,7 @@ class ETextFields extends StatelessWidget {
           horizontal: 16.0,
         ),
         decoration: BoxDecoration(
-          color: '#CDCDCD'.toColor(),
+          color: ColorLib.darkGray,
           borderRadius: const BorderRadius.all(
             Radius.circular(
               6.0,
@@ -41,7 +41,7 @@ class ETextFields extends StatelessWidget {
             border: InputBorder.none,
             hintStyle: GoogleFonts.roboto(
               fontWeight: FontWeight.w400,
-              color: '#455154'.toColor(),
+              color: ColorLib.lightBlack,
             ),
           ),
         ),
