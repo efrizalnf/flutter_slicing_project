@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin3/buttons/elogin_button.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin3/buttons/signup_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
