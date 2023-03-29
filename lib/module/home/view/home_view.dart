@@ -16,8 +16,8 @@ class HomeView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
-          child: const Column(
-            children: [],
+          child: Column(
+            children: const [],
           ),
         ),
       ),

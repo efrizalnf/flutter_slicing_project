@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
+
+import '../../../state_util.dart';
 
 class ETerms extends StatelessWidget {
   const ETerms({super.key});
@@ -31,6 +34,10 @@ class ETerms extends StatelessWidget {
                   style: TextStyle(
                     color: ColorLib.primaryColor,
                   ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      Get.launchUrls(Uri.parse('https://flutter.dev'));
+                    },
                 ),
                 TextSpan(
                   text: " And",
@@ -43,6 +50,10 @@ class ETerms extends StatelessWidget {
                   style: TextStyle(
                     color: ColorLib.primaryColor,
                   ),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      Get.launchUrls(Uri.parse('https://google.com'));
+                    },
                 ),
               ],
             ),

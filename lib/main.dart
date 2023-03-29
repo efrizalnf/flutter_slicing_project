@@ -1,5 +1,8 @@
+
+import 'package:flutter_slicing_project/core.dart';
 import 'package:flutter_slicing_project/state_util.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
