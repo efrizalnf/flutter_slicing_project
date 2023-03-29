@@ -15,7 +15,7 @@ class ETextButton extends StatelessWidget {
       child: TextButton(
         onPressed: () {},
         child: Text(
-          "Forgot password?",
+          "Login with Email",
           style: GoogleFonts.roboto(
             color: '#59B58D'.toColor(),
             fontWeight: FontWeight.w700,
