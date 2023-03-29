@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_slicing_project/core.dart';
+import 'package:flutter_slicing_project/state_util.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,6 +19,7 @@ class MyApp extends StatelessWidget {
             .copyWith(background: Colors.white),
       ),
       home: const Placeholder(),
+      navigatorKey: Get.navigatorKey,
     );
   }
 }
