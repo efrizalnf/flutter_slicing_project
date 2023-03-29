@@ -22,7 +22,7 @@ void main() {
         'Ensuring the Icon widget for logo is appearing',
         (widgetTester) async {
           await widgetTester.pumpWidget(widgetUnderTest());
-          expect(find.byType(Icon), findsOneWidget);
+          expect(find.byType(Image), findsOneWidget);
         },
       );
       testWidgets(

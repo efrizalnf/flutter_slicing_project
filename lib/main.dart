@@ -1,6 +1,8 @@
+
 import 'package:flutter_slicing_project/core.dart';
+import 'package:flutter_slicing_project/state_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/module/signup/view/signup2_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
             .copyWith(background: Colors.white),
       ),
-      home: const Signup2View(),
+      home: const Placeholder(),
       navigatorKey: Get.navigatorKey,
     );
   }

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
-import 'package:flutter_slicing_project/module/signup/widget/e_buttons.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:ionicons/ionicons.dart';
-
-import '../widget/e_term_conditions.dart';
-import '../widget/e_text_field_1.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);

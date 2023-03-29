@@ -3,6 +3,7 @@
     "modules": [
         "home",
         "signup",
-        "login"
+        "login",
+        "dashboard"
     ]
 }

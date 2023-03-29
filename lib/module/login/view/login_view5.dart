@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/core.dart';
-import 'package:flutter_slicing_project/module/login/controller/login_controller5.dart';
-import 'package:flutter_slicing_project/module/login/widget/elogin5/buttons/elogin_button.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -37,18 +35,21 @@ class LoginView5 extends StatefulWidget {
             ),
             const ELoginButton(
               label: 'Log In with Google',
+              icon: Ionicons.logo_google,
             ),
             SizedBox(
               height: Get.height * 0.01,
             ),
             const ELoginButton(
               label: 'Log In with Facebook',
+              icon: Ionicons.logo_facebook,
             ),
             SizedBox(
               height: Get.height * 0.01,
             ),
             const ELoginButton(
               label: 'Log In as Guest',
+              icon: Ionicons.people,
             ),
           ],
         ),
