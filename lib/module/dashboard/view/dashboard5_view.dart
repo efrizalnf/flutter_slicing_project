@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slicing_project/core.dart';
 import 'package:ionicons/ionicons.dart';
 
-import '../../../shared/widget/other/e_circle_avatar.dart';
 import '../../../utils/color_lib.dart';
 import '../controller/dashboard5_controller.dart';
 
@@ -67,18 +67,68 @@ class Dashboard5View extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              Expanded(
-                child: ListView.builder(
-                  itemCount: 3,
-                  physics: const ScrollPhysics(),
-                  itemBuilder: (BuildContext context, int index) {
-                    return ECircleAvatar(
-                        avatarRadius: 50.0,
-                        iconSize: 32.0,
-                        bgCircleAvatar: ColorLib.lightBlack,
-                        bgIcon: ColorLib.lightGray,
-                        icon: Ionicons.add);
-                  },
+              Container(
+                margin: const EdgeInsets.only(
+                    left: 15.0, right: 20.0, top: 10.0, bottom: 6.0),
+                child: SizedBox(
+                  height: 72.0,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 23,
+                    physics: const ScrollPhysics(),
+                    itemBuilder: (BuildContext context, int index) {
+                      if (index == 0) {
+                        return Padding(
+                          padding:
+                              const EdgeInsets.only(left: 18.0, right: 18.0),
+                          child: Column(
+                            children: [
+                              ECircleAvatar(
+                                avatarRadius: 24.0,
+                                iconSize: 24.0,
+                                bgCircleAvatar: ColorLib.primaryColor,
+                                bgIcon: ColorLib.white,
+                                icon: Ionicons.add,
+                              ),
+                              const SizedBox(
+                                height: 6.0,
+                              ),
+                              const Text(
+                                "Add Story",
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      } else {
+                        return Padding(
+                          padding: const EdgeInsets.only(left: 9.0, right: 9.0),
+                          child: Column(
+                            children: [
+                              ECircleAvatar(
+                                avatarRadius: 24.0,
+                                iconSize: 24.0,
+                                bgCircleAvatar: ColorLib.lightGray,
+                                bgIcon: ColorLib.darkGray,
+                                icon: Ionicons.person,
+                              ),
+                              const SizedBox(
+                                height: 6.0,
+                              ),
+                              const Text(
+                                "Add Story",
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }
+                    },
+                  ),
                 ),
               ),
             ],
