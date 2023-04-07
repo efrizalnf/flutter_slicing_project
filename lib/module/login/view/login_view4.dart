@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slicing_project/module/login/controller/login_controller4.dart';
 import 'package:flutter_slicing_project/state_util.dart';
-
 import '../widget/elogin4/buttons/elogin_button.dart';
 import '../widget/elogin4/buttons/etext_button.dart';
 import '../widget/elogin4/grid/egrid_widget.dart';
@@ -15,7 +14,9 @@ class LoginView4 extends StatefulWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: Get.width * 0.08),
+          padding: EdgeInsets.symmetric(
+            horizontal: Get.width * 0.08,
+          ),
           child: Column(
             children: [
               SizedBox(
@@ -37,7 +38,7 @@ class LoginView4 extends StatefulWidget {
               SizedBox(
                 height: Get.height * 0.02,
               ),
-              const EGridWidget(),
+              const Expanded(child: EGridWidget()),
               SizedBox(
                 height: Get.height * 0.31,
               ),

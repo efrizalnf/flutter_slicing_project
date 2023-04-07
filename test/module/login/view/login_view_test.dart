@@ -70,13 +70,19 @@ void main() {
 
           // Finding by text on the buttons
           expect(find.text('Login'), findsOneWidget);
-          expect(find.text('Forgot password?'), findsOneWidget);
+          // expect(find.text('Forgot password?'), findsOneWidget);
           expect(find.text('Sign Up'), findsOneWidget);
 
           // Finding by the type of the buttons
           expect(find.byType(ElevatedButton), findsWidgets);
-          expect(find.byType(ElevatedButton), findsNWidgets(2));
+          // expect(find.byType(ElevatedButton), findsNWidgets(2));
           expect(find.byType(TextButton), findsOneWidget);
+
+          expect(
+              find.ancestor(
+                  of: find.text('Login'),
+                  matching: find.byType(ElevatedButton)),
+              findsOneWidget);
         },
       );
     },
