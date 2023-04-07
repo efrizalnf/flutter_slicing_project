@@ -1,6 +1,6 @@
 import 'package:flutter_slicing_project/core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/module/dashboard/view/dashboard5_view.dart';
+import 'package:flutter_slicing_project/module/dashboard/view/edashboard5/dashboard5_view.dart';
 import 'package:flutter_slicing_project/utils/color_lib.dart';
 
 void main() {
