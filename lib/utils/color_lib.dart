@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ColorLib {
   static final primaryColor = '#59B58D'.toColor();
   static final lightBlack = '#455154'.toColor();
-  static final darkBlack = '#C3C9CB'.toColor();
+  static final darkBlack = '#455154'.toColor();
   static final darkGray = '#CDCDCD'.toColor();
   static final lightGray = '#F4F6F6'.toColor();
   static final white = '#FFFFFF'.toColor();
