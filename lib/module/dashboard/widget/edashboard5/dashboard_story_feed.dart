@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 
-import '../../../shared/widget/other/e_circle_avatar.dart';
-import '../../../utils/color_lib.dart';
+import '../../../../shared/widget/other/e_circle_avatar.dart';
+import '../../../../utils/color_lib.dart';
 
 class DashboardStoryFeed extends StatelessWidget {
   const DashboardStoryFeed({super.key});

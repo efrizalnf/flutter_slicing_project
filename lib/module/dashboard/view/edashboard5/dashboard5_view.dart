@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/module/dashboard/widget/dashboard_item.dart';
 import 'package:ionicons/ionicons.dart';
 
-import '../../../utils/color_lib.dart';
-import '../controller/dashboard5_controller.dart';
-import '../widget/dashboard_story_feed.dart';
+import '../../../../utils/color_lib.dart';
+import '../../controller/edashboard5/dashboard5_controller.dart';
+import '../../widget/edashboard5/dashboard_item.dart';
+import '../../widget/edashboard5/dashboard_story_feed.dart';
 
 class Dashboard5View extends StatefulWidget {
   const Dashboard5View({super.key});
