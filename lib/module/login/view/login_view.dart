@@ -6,9 +6,6 @@ class LoginView extends StatefulWidget {
 
   Widget build(context, LoginController controller) {
     controller.view = this;
-    TextEditingController emailController = TextEditingController();
-    TextEditingController passwordController = TextEditingController();
-
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -20,7 +17,7 @@ class LoginView extends StatefulWidget {
             ),
             ETextField(
               label: 'Email',
-              textEditingController: emailController,
+              textEditingController: controller.emailController,
             ),
             SizedBox(
               height: Get.height * 0.01,
@@ -31,7 +28,7 @@ class LoginView extends StatefulWidget {
                 Icons.visibility,
                 color: Colors.grey[600],
               ),
-              textEditingController: passwordController,
+              textEditingController: controller.passwordController,
             ),
             SizedBox(
               height: Get.height * 0.02,
