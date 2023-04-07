@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
@@ -30,10 +31,13 @@ class Signup2View extends StatefulWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Icon(
-              Ionicons.close_outline,
-              size: 24,
-              color: ColorLib.primaryColor,
+            child: GestureDetector(
+              onTap: () {},
+              child: Icon(
+                Ionicons.close_outline,
+                size: 24,
+                color: ColorLib.primaryColor,
+              ),
             ),
           )
         ],
@@ -41,25 +45,34 @@ class Signup2View extends StatefulWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(top: 50.0, bottom: 30.0),
-              child: Stack(
-                alignment: Alignment.bottomRight,
-                children: [
-                  ECircleAvatar(
-                      avatarRadius: 100.0,
-                      iconSize: 100.0,
-                      bgCircleAvatar: ColorLib.darkGray,
-                      bgIcon: ColorLib.lightBlack,
-                      icon: Icons.person),
-                  ECircleAvatar(
-                      avatarRadius: 32.0,
-                      iconSize: 32.0,
-                      bgCircleAvatar: ColorLib.primaryColor,
-                      bgIcon: ColorLib.white,
-                      icon: Icons.camera_alt),
-                ],
-              ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                ECircleAvatar(
+                    avatarRadius: 100.0,
+                    iconSize: 100.0,
+                    bgCircleAvatar: ColorLib.darkGray,
+                    bgIcon: ColorLib.lightBlack,
+                    icon: Icons.person),
+                GestureDetector(
+                  onTap: () {
+                    print('Cliked');
+                  },
+                  child: ECircleAvatar(
+                    avatarRadius: 32.0,
+                    iconSize: 32.0,
+                    bgCircleAvatar: ColorLib.primaryColor,
+                    bgIcon: ColorLib.white,
+                    icon: Icons.camera_alt,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 30.0,
             ),
             ETextFields(
               label: 'Full Name',
@@ -91,14 +104,18 @@ class Signup2View extends StatefulWidget {
               height: 190.0,
             ),
             Expanded(
-              child: Text(
-                "I have an account",
-                style: TextStyle(
-                  color: ColorLib.primaryColor,
-                  fontSize: 18.0,
+              child: TextButton(
+                child: Text(
+                  "I have an account",
+                  style: GoogleFonts.roboto(
+                    color: ColorLib.primaryColor,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18.0,
+                  ),
                 ),
+                onPressed: () {},
               ),
-            ),
+            )
           ],
         ),
       ),
