@@ -45,15 +45,18 @@ class Signup2View extends StatefulWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(
-              height: 50.0,
+            const Flexible(
+              flex: 1,
+              child: SizedBox(
+                height: 45.0,
+              ),
             ),
             Stack(
               alignment: Alignment.bottomRight,
               children: [
                 ECircleAvatar(
-                    avatarRadius: 100.0,
-                    iconSize: 100.0,
+                    avatarRadius: 40.0,
+                    iconSize: 40.0,
                     bgCircleAvatar: ColorLib.darkGray,
                     bgIcon: ColorLib.lightBlack,
                     icon: Icons.person),
@@ -62,8 +65,8 @@ class Signup2View extends StatefulWidget {
                     print('Cliked');
                   },
                   child: ECircleAvatar(
-                    avatarRadius: 32.0,
-                    iconSize: 32.0,
+                    avatarRadius: 16.0,
+                    iconSize: 16.0,
                     bgCircleAvatar: ColorLib.primaryColor,
                     bgIcon: ColorLib.white,
                     icon: Icons.camera_alt,
@@ -71,8 +74,11 @@ class Signup2View extends StatefulWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 30.0,
+            const Flexible(
+              flex: 1,
+              child: SizedBox(
+                height: 25.0,
+              ),
             ),
             ETextFields(
               label: 'Full Name',
@@ -93,17 +99,21 @@ class Signup2View extends StatefulWidget {
               textEditingController: controller.passwordController,
             ),
             const SizedBox(
-              height: 20.0,
+              height: 15.0,
             ),
             const EButtons(label: 'Sign Up'),
             const SizedBox(
-              height: 21.0,
+              height: 15.0,
             ),
-            const ETerms(),
-            const SizedBox(
-              height: 190.0,
+            const Flexible(flex: 1, child: ETerms()),
+            const Flexible(
+              flex: 1,
+              child: SizedBox(
+                height: 130.0,
+              ),
             ),
-            Expanded(
+            Flexible(
+              flex: 1,
               child: TextButton(
                 child: Text(
                   "I have an account",

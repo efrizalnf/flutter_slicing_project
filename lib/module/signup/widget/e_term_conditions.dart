@@ -12,50 +12,56 @@ class ETerms extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          RichText(
-            maxLines: 2,
-            softWrap: true,
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "By signing up, you agree to our",
-                  style: TextStyle(
-                    color: ColorLib.darkBlack,
+          Flexible(
+            flex: 1,
+            child: RichText(
+              maxLines: 2,
+              softWrap: true,
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: "By signing up, you agree to our",
+                    style: TextStyle(
+                      color: ColorLib.darkBlack,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "Terms",
-                  style: TextStyle(
-                    color: ColorLib.primaryColor,
+          Flexible(
+            flex: 1,
+            child: RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: "Terms",
+                    style: TextStyle(
+                      color: ColorLib.primaryColor,
+                    ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Get.launchUrls(Uri.parse('https://flutter.dev'));
+                      },
                   ),
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      Get.launchUrls(Uri.parse('https://flutter.dev'));
-                    },
-                ),
-                TextSpan(
-                  text: " And",
-                  style: TextStyle(
-                    color: ColorLib.darkBlack,
+                  TextSpan(
+                    text: " And",
+                    style: TextStyle(
+                      color: ColorLib.darkBlack,
+                    ),
                   ),
-                ),
-                TextSpan(
-                  text: " Privacy",
-                  style: TextStyle(
-                    color: ColorLib.primaryColor,
+                  TextSpan(
+                    text: " Privacy",
+                    style: TextStyle(
+                      color: ColorLib.primaryColor,
+                    ),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Get.launchUrls(Uri.parse('https://google.com'));
+                      },
                   ),
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      Get.launchUrls(Uri.parse('https://google.com'));
-                    },
-                ),
-              ],
+                ],
+              ),
             ),
           )
         ],

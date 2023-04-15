@@ -10,6 +10,12 @@ class DashboardHeader extends StatelessWidget {
 
   final PageController pageController;
   final TabController tabController;
+  final List<String> imageCategories = const [
+    'https://api.lorem.space/image/watch?w=345&h=180&r=',
+    'https://api.lorem.space/image/fashion?w=345&h=180&r=',
+    'https://api.lorem.space/image/shoes?w=345&h=180&r=',
+    'https://api.lorem.space/image/furniture?w=345&h=180&r=',
+  ];
 
   @override
   Widget build(BuildContext context) {
