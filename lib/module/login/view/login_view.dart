@@ -33,9 +33,9 @@ class LoginView extends StatefulWidget {
             SizedBox(
               height: Get.height * 0.02,
             ),
-            const EloginButton(
-              label: 'Login',
-            ),
+            // const EloginButton(
+            //   label: 'Login',
+            // ),
             SizedBox(
               height: Get.height * 0.02,
             ),

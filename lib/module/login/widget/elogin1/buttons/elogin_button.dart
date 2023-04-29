@@ -1,28 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slicing_project/state_util.dart';
-import 'package:flutter_slicing_project/utils/color_lib.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class EloginButton extends StatelessWidget {
+class Elogin5Button extends StatelessWidget {
+  const Elogin5Button({super.key, required this.label, required this.icon});
   final String label;
-  const EloginButton({super.key, required this.label});
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: Get.width * 0.08, right: Get.width * 0.08),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-            backgroundColor: '#59B58D'.toColor(),
-            minimumSize: const Size.fromHeight(44)),
-        onPressed: () {},
-        child: Text(
-          label,
-          style: GoogleFonts.roboto(
-            fontWeight: FontWeight.w700,
-            fontSize: 18.0,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF59B58D),
+        minimumSize: const Size.fromHeight(44),
+      ),
+      onPressed: () {},
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            label,
+            style: GoogleFonts.roboto(
+              fontWeight: FontWeight.w700,
+              fontSize: 18.0,
+            ),
           ),
-        ),
+          Icon(
+            icon,
+            color: const Color(0xFFFFFFFF),
+          )
+        ],
       ),
     );
   }

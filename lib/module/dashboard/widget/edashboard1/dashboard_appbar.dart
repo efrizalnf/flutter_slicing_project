@@ -5,16 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 
 class DashboardAppBar extends StatelessWidget implements PreferredSize {
-  const DashboardAppBar({
-    super.key,
-  });
+  const DashboardAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
       // tinggi dari title ditentukan oleh toolbarHeight
       // maka isi nilai toolbarHeight sama dengan tinggi dari appbar
-      pinned: true,
+      pinned: false,
       toolbarHeight: 106,
       backgroundColor: Colors.white,
       centerTitle: false,

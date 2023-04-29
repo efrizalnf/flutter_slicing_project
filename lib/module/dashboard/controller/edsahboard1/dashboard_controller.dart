@@ -24,8 +24,9 @@ class DashboardController extends State<DashboardView>
   List<Product> _products = [];
   List<Product> get products => _products;
 
-  Future<List<Product>> getProducts() async {
-    return _products = await DashboardService.getProducts();
+  void getProducts() async {
+    _products = await DashboardService.getProducts();
+    setState(() {});
   }
 
   @override

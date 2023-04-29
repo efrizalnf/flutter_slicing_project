@@ -17,7 +17,7 @@ class DashboardGrid extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(6),
                     child: Image.network(
-                      products[index].images,
+                      'https://picsum.photos/id/$index/165/120',
                       width: 165,
                       height: 120,
                       fit: BoxFit.fill,

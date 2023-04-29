@@ -33,21 +33,21 @@ class LoginView5 extends StatefulWidget {
             SizedBox(
               height: Get.height * 0.06,
             ),
-            const ELoginButton(
+            const Elogin5Button(
               label: 'Log In with Google',
               icon: Ionicons.logo_google,
             ),
             SizedBox(
               height: Get.height * 0.01,
             ),
-            const ELoginButton(
+            const Elogin5Button(
               label: 'Log In with Facebook',
               icon: Ionicons.logo_facebook,
             ),
             SizedBox(
               height: Get.height * 0.01,
             ),
-            const ELoginButton(
+            const Elogin5Button(
               label: 'Log In as Guest',
               icon: Ionicons.people,
             ),
