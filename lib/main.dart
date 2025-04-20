@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
-            .copyWith(background: ColorLib.darkGray),
+            .copyWith(surface: ColorLib.darkGray),
       ),
       home: const Dashboard2View(),
       navigatorKey: Get.navigatorKey,
